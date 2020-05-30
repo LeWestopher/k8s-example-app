@@ -15,15 +15,17 @@ spec:
       containers:
         - name: frontend
           env:
-            - name: POSTGRES_USER
+            - name: PGUSER
               value: "postgresadmin"
-            - name: POSTGRES_HOST
-              value: "192.168.99.100"
-            - name: POSTGRES_DB
+            - name: PGHOST
+              value: "postgres"
+            - name: PGDATABASE
               value: "postgresdb"
-            - name: POSTGRES_PASSWORD
+            - name: PGPASSWORD
               value: "admin123"
-          image: skribblemusic/boone-example-2:v1
+            - name: PGPORT
+              value: "5432"
+          image: skribblemusic/boone-example-2:release-0.0.5
           imagePullPolicy: "IfNotPresent"
           ports:
             - containerPort: 8080

@@ -12,6 +12,7 @@
     "create-frontend": "kubectl create -f front-end/app.yaml"
   },
   "dependencies": {
-    "express": "^4.16.1"
+    "express": "^4.16.1",
+    "pg": "^8.2.1"
   }
 }
