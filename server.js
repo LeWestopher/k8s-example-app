@@ -15,9 +15,9 @@ app.get('/', (req, res) => {
   res.send(`Database: User: ${DB_USER}, Host: ${DB_HOST}, Database: ${DB_DATABASE}, Password: ${DB_PASSWORD}`);
 });
 
-app.get('/test', async (req, res) => {
+app.get('/now', async (req, res) => {
   const results = await db.query('SELECT NOW()')
-  res.send(JSON.stringify(results, null, 4));
+  res.send(JSON.stringify(results.rows[0], null, 4));
 });
 
 app.listen(PORT, HOST);

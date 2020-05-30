@@ -9,7 +9,8 @@
     "kube-start": "minikube start --vm-driver virtualbox",
     "kube-kill": "minikube stop && minikube delete",
     "get-env-var": "echo $BOONE_POD_NAME",
-    "create-frontend": "kubectl create -f front-end/app.yaml"
+    "create-frontend": "kubectl create -f front-end/app.yaml",
+    "curl": "kubectl run curl --image=radial/busyboxplus:curl -i --tty"
   },
   "dependencies": {
     "express": "^4.16.1",
