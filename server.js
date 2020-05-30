@@ -9,8 +9,6 @@ const DB_HOST = process.env.PGHOST;
 const DB_DATABASE = process.env.PGDATABASE;
 const DB_PASSWORD = process.env.PGPASSWORD;
 
-const pool = new Pool()
-
 // App
 const app = express();
 app.get('/', (req, res) => {
