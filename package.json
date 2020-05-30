@@ -1,0 +1,17 @@
+{
+  "name": "docker_web_app",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "Wes King <wes@boone.io>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "kube-start": "minikube start --vm-driver virtualbox",
+    "kube-kill": "minikube stop && minikube delete",
+    "get-env-var": "echo $BOONE_POD_NAME",
+    "create-frontend": "kubectl create -f front-end/app.yaml"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
